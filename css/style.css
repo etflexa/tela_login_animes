@@ -1,0 +1,123 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	height: 100vh;
+}
+
+/*Definição de imagem de fundo para a página*/
+body{
+	background-image: url(../img/fundo_site.jpg);
+	font-family: Roboco, Arial, sans-serif;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Configurações do texto pricipal da página*/
+h1{
+	font-size: 32px;
+	letter-spacing: 1px;
+	margin: 180px 0;
+	color: white;
+}
+
+/*Definições da form que contempla os inputs e o botão de login*/
+form{
+	margin: -110px 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 30px 25px;
+	border-radius: 40px;
+	width: 400px;
+	height: 250px;
+}
+
+form .input-block{
+	margin-bottom: 20px;
+}
+
+form .input-block label{
+	font-size: 14px;
+	color: white;
+}
+
+form .input-block input{
+	width: 100%;
+	display: block;
+	margin-top: 8px;
+	padding: 7px;
+	font-size: 16px;
+	color: #000000;
+	border-radius: 2px;
+	border: 1px solid #ccddef;
+	outline-color: #0b75e6;
+}
+
+/*Definições do botão de login*/
+form .btn-login{
+	display: block;
+	min-width: 120px;
+	border: none;
+	background-color: #0b75e6;
+	color: white;
+	border-radius: 25px;
+	margin: auto;
+	padding: 7px;
+}
+
+/*Surgimento da form*/
+
+form {
+  overflow: hidden;
+  animation: fade 0.2s;
+}
+
+form .input-block:nth-child(1) {
+  animation: move 400ms;
+}
+
+form .input-block:nth-child(2) {
+  animation: move 400ms;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+form .btn-login {
+  animation: move 400ms;
+  animation-delay: 250ms;
+  animation-fill-mode: backwards;
+}
+
+/*keyframes responsáveis pelos efeitos de movimentação da form*/
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
